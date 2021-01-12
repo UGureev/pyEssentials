@@ -1,2 +1,1 @@
-### Прохождение курса ITVDN Python Essentials 2016 ###
- 
+### Прохождение курса ITVDN Python Essentials 2016
