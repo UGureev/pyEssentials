@@ -1,5 +1,5 @@
 try:
-    print(1/0)
+    print(1 / 0)
 except ZeroDivisionError as e:
     print(e)
 except (ValueError, IndexError):
@@ -19,6 +19,7 @@ try:
 finally:
     print("Это минимальный блок try")
 
+
 ##########
 
 
@@ -30,10 +31,9 @@ class ObjectWithDestructor:
 obj = ObjectWithDestructor()
 del obj
 
-
 # сцепление исключеней
 try:
-    print(1/0)
+    print(1 / 0)
 except ZeroDivisionError:
     raise ValueError
 except ValueError:
@@ -47,8 +47,8 @@ e.__suppress_context__ = True  # подавление исходного иск�
 e.__cause__ = IndexError()  # генерируемое исключение
 raise e
 
-
 # предупреждения, выводят исключения но не прерывают программу
 # наследники класса Exception -> Warning -> UserWarning
 import warnings
+
 warnings.warn(message="Warning!", category=DeprecationWarning, stacklevel=1)
